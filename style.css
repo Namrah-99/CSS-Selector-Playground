@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
+/* beige, #f0f0ca, #ebeba8 */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  height: auto;
+  background-color: beige;
+  text-align: justify;
+}
+/* a {
+  text-decoration: none;
+  color: aliceblue;
+} */
+.items {
+  font-size: 2rem;
+}
+aside {
+  background: linear-gradient(beige, #f0f0ca, #ebeba8);
+}
+input {
+  padding: 0.5rem;
+  margin-block: 0.5rem;
+}
+/* -----------------------------------------------------------------------------------------  */
+.selectorContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+.mainDiv {
+  margin-block: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.mainDiv > div {
+  margin: 1rem;
+}
+/* larger size screens  */
+@media (min-width: 700px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .mainDiv > div {
+    margin: 2rem 6rem;
+  }
+}
+
+/* --------------------------------------------------------------------  side bar */
+.sidebar-content h1 {
+  margin: 0 auto;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  transition: all 0.3s linear;
+  cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.sidebar-toggle:hover {
+  color: var(--clr-primary-7);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.close-btn {
+  font-size: 1.75rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  transition: all 0.3s linear;
+  cursor: pointer;
+  color: var(--clr-red-dark);
+}
+.close-btn:hover {
+  color: var(--clr-red-light);
+  transform: rotate(360deg);
+}
+.logo {
+  justify-self: center;
+  height: 40px;
+}
+
+.sidebar-links li {
+  /* beige, #f0f0ca, #ebeba8 */
+  border-bottom: 0.5rem ridge #f0f0ca;
+}
+
+.sidebar-content li {
+  list-style: none;
+}
+
+.sidebarLink {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: black;
+  transition: all 0.3s linear;
+}
+
+.sidebarLink:hover {
+  background: #000000;
+  color: #f0f0ca;
+  padding-left: 1.75rem;
+}
+
+.social-icons {
+  justify-self: center;
+  display: flex;
+  padding-bottom: 2rem;
+}
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: var(--clr-primary-5);
+  transition: all 0.3s linear;
+}
+.social-icons a:hover {
+  color: var(--clr-primary-1);
+}
+
+.sidebar-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  box-shadow: var(--clr-red-dark);
+  transition: all 0.3s linear;
+  transform: translate(-100%);
+
+  height: 100vh; /* Set the height of the sidebar container */
+  overflow-y: scroll; /* Add scroll to the sidebar container */
+}
+.show-sidebar {
+  transform: translate(0);
+  width: 100%;
+}
+@media screen and (min-width: 676px) {
+  .sidebar-content {
+    width: 230px;
+  }
+  .mainDiv {
+    width: calc(100% - 230px);
+  }
+}
+
+/* --------------------------------------------------------------------  mainDiv */
+.sampleCode {
+  border: 1px dashed #cecece;
+  padding: 2rem;
+}
+
+.sampleCode img {
+  padding: 1rem;
+}
+
+.sample {
+  margin-block: 8rem;
+}
+.sample:first-child,
+.sample:last-child {
+  margin-block: 0;
+}
+/* Style the button */
+button {
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.details,
+.relevant-resources {
+  border: 1px dashed #cecece;
+  padding: 1rem;
+}
+
+.relevant-resources a {
+  color: #000000;
+}
+
+.showexplanation,
+.relevant-resources a {
+  padding-left: 4rem;
+}
+
+.selectorBtn {
+  display: inline-block;
+  border-block: 1px solid #000000;
+  border-radius: 10%;
+  background-color: transparent;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1rem;
+  padding-inline: 3rem;
+  margin-inline: 2rem;
+}
+
+.selectorBtn:hover {
+  background-color: #f0f0ca;
+  border: 1px solid #000000;
+  color: #000000;
+  border-radius: 20%;
+}
+
+.instructions {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1rem;
+  font-size: 3rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  transition: all 0.3s linear;
+  cursor: pointer;
+  /* animation: bounce 2s ease-in-out infinite; */
+}
+/* -------------------------------------------------------------------- Add Classes to selected content */
+/* A pseudo-class is used to define a special state of an element.
+
+For example, it can be used to:
+
+Style an element when a user mouses over it
+Style visited and unvisited links differently
+Style an element when it gets focus */
+
+/* For some selectors , classes which are added on selected content */
+.ativate-anchor-tag:active {
+  background-color: #b8621b;
+  border: 1px solid rgb(65, 60, 60);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.after-pseudo-class::after {
+  content: ".0)";
+  color: rgb(255, 123, 0);
+}
+.before-pseudo-class::before {
+  content: "$(";
+  color: rgb(0, 255, 76);
+}
+.input-checked-pseudo-class:checked {
+  color: olive;
+  height: 30px;
+  width: 30px;
+}
+.input-default-pseudo-class:default {
+  box-shadow: 0 0 1px 1px rgb(255, 0, 234);
+}
+/* input[type="text"]:enabled { */
+.input-enabled-pseudo-class:enabled {
+  border: 1px solid red;
+  background: #ffff00;
+}
+
+.input-disabled-pseudo-class:disabled {
+  background: #b6f0eb;
+}
+
+.my-first-letter::first-letter {
+  font-size: 200%;
+}
+
+.my-first-line::first-line {
+  color: #b8621b;
+}
+
+.input-focus-pseudo-class:focus {
+  background: #eebe65;
+  border: 2px dashed rgb(255, 153, 0);
+  outline: 2px dashed rgb(255, 0, 0);
+}
+
+/* Safari syntax */
+:-webkit-full-screen {
+  background-color: yellow;
+}
+
+/* IE11 syntax */
+:-ms-fullscreen {
+  background-color: yellow;
+}
+
+/* Standard syntax */
+:fullscreen {
+  background-color: yellow;
+}
+
+.hover-pseudo-class:hover {
+  background-color: crimson;
+  color: azure;
+}
+
+.in-range-pseudo-class:in-range {
+  outline: 3px dashed rgb(96, 202, 221);
+}
+
+.indeterminate-pseudo-class:indeterminate {
+  box-shadow: 0 0 1px 1px red;
+}
+
+.invalid-pseudo-class:invalid {
+  border: 2px solid red;
+}
+
+.link-pseudo-class:link {
+  outline: 2px dashed rgb(0, 4, 255);
+}
+
+.marker-pseudo-element::marker {
+  color: #e100ff;
+}
+
+.placeholder-pseudo-class::-webkit-input-placeholder {
+  /* Edge */
+  color: red;
+  background-color: #00ccff;
+  outline: #00ccff;
+}
+
+.placeholder-pseudo-class:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: red;
+  background-color: #00ccff;
+  outline: #00ccff;
+}
+
+.placeholder-pseudo-class::placeholder {
+  color: red;
+  background-color: #00ccff;
+  outline: #00ccff;
+  border-color: blue; /* set the border color to blue */
+  color: white; /* set the text color to white */
+}
+
+.radiocheck-pseudo-class:read-only,
+.radiocheck-pseudo-class:valid {
+  -webkit-appearance: none; /* hide the default appearance on WebKit-based browsers */
+  -moz-appearance: none; /* hide the default appearance on Firefox */
+  appearance: none; /* hide the default appearance on other browsers */
+
+  border: 2px solid rgb(224, 69, 121); /* add a border */
+  background-color: rgb(195, 238, 6); /* set the background color */
+  outline: none; /* remove the outline */
+}
+
+.slection-pseudo-class::selection {
+  color: #f9d423;
+  background: #e65c00;
+}
+
+.target-pseudo-class:target {
+  border: 2px solid #b8621b;
+  background-color: #e5eecc;
+}
+
+.visited-links-pseudo-class:visited {
+  color: rgb(235, 141, 157);
+}
+/* --------------------------------------------------------------------  */
+.scroll-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 50%;
+  z-index: 1;
+  display: none;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.scroll-btn:hover {
+  background-color: #555;
+}
+
+/* style  */
+/* --------------- scroll bar styling -----------------  */
+.sidebar-content::-webkit-scrollbar {
+  width: 0.6rem; /* Set the width of the scrollbar */
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Set the background color of the track */
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #f0f0ca;
+  /* Set the background color of the thumb */
+  border-radius: 5px; /* Set the border radius of the thumb */
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+  background-color: #212121;
+  /* Set the background color of the thumb when hovered */
+}
+/* --------------- ---------------- -----------------  */
+/* for dialog (instructions) */
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+  height: fit-content;
+  width: 50%;
+  padding: 2.5rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #f5f5e0;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+dialog div {
+  height: 100%;
+  padding-block-start: 2rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* --------------- ---------------- -----------------  */
+.greet {
+  color: #000000;
+  text-decoration: none;
+}
+/* --------------- ---------------- -----------------  */

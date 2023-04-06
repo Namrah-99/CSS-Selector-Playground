@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- My Selectors Editor : visit  Replit link: https://replit.com/@NamrahSaeed/Selectors-Editor -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../images/favicon/favicon-96x96.png"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Selectors Understanding</title>
+  </head>
+  <body>
+    <!-- header  -->
+    <button title="button" class="sidebar-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <button title="button" class="instructions">
+      <i class="fas fa-comments" aria-hidden="true"></i>
+    </button>
+    <dialog class="modal" id="modal" class="center">
+      <div>
+        <div class="flex-space-between">
+          <h1>Instructions</h1>
+          <button title="button" class="button close-modal">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
+        <p title="paragraph">
+          To ensure that you see all the results of your CSS selector, please
+          wait until they have finished loading on the page. Once all the
+          results are shown, you will be automatically scrolled back to the top
+          of the page. This process may take a few seconds, so please be patient
+          and wait for the page to finish loading before proceeding.
+        </p>
+      </div>
+    </dialog>
+
+    <div class="selectorContainer">
+      <aside class="sidebar-content">
+        <div class="sidebar-header">
+          <img
+            src="../images/favicon/apple-icon-180x180.png"
+            class="logo"
+            alt="logo"
+          />
+          <button title="button" class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <h1>CSS Selectors</h1>
+        <ul class="sidebar-links">
+          <li>
+            <button title="button" class="sidebarLink" data-id="1" href="#">
+              .class
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="2" href="#">
+              .class1.class2
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="3" href="#">
+              .class1 .class2
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="4" href="#">
+              #id
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="5" href="#">
+              *
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="6" href="#">
+              element
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="7" href="#">
+              element.class
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="8" href="#">
+              element,element
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="9" href="#">
+              element element
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="10" href="#">
+              element>element
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="11" href="#">
+              element+element
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="12" href="#">
+              element1~element2
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="13" href="#">
+              [attribute]
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="14" href="#">
+              [attribute=value]
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="15" href="#">
+              [attribute~=value]
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="16" href="#">
+              [attribute|=value]
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="17" href="#">
+              [attribute^=value]
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="18" href="#">
+              [attribute$=value]
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="19" href="#">
+              [attribute*=value]
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="20" href="#">
+              :active
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="21" href="#">
+              ::after
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="22" href="#">
+              ::before
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="23" href="#">
+              :checked
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="24" href="#">
+              :default
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="25" href="#">
+              :disabled
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="26" href="#">
+              :empty
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="27" href="#">
+              :enabled
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="28" href="#">
+              :first-child
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="29" href="#">
+              ::first-letter
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="30" href="#">
+              ::first-line
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="31" href="#">
+              :first-of-type
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="32" href="#">
+              :focus
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="33" href="#">
+              :fullscreen
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="34" href="#">
+              :hover
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="35" href="#">
+              :in-range
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="36" href="#">
+              :indeterminate
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="37" href="#">
+              :invalid
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="38" href="#">
+              :lang(language)
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="39" href="#">
+              :last-child
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="40" href="#">
+              :last-of-type
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="41" href="#">
+              :link
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="42" href="#">
+              ::marker
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="43" href="#">
+              :not(selector)
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="44" href="#">
+              :nth-child(n)
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="45" href="#">
+              :nth-last-child(n)
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="46" href="#">
+              :nth-last-of-type(n)
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="47" href="#">
+              :nth-of-type(n)
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="48" href="#">
+              :only-of-type
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="49" href="#">
+              :only-child
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="50" href="#">
+              :optional
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="51" href="#">
+              :out-of-range
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="52" href="#">
+              ::placeholder
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="53" href="#">
+              :read-only
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="54" href="#">
+              :read-write
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="55" href="#">
+              :required
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="56" href="#">
+              :root
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="57" href="#">
+              ::selection
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="58" href="#">
+              :target
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="59" href="#">
+              :valid
+            </button>
+          </li>
+          <li>
+            <button title="button" class="sidebarLink" data-id="60" href="#">
+              :visited
+            </button>
+          </li>
+        </ul>
+      </aside>
+      <!-- main div  -->
+      <main class="mainDiv">
+        <div class="purpose">
+          <h1>CSS Selectors</h1>
+          <h4 title="explanation">
+            <br />
+            This website is designed to help you learn and get to know about
+            almost all the CSS selectors, including some advanced selectors. My
+            aim is to provide you with a comprehensive understanding of CSS
+            selectors, so that you can use them effectively in your web
+            development projects. I have included practical examples of each
+            selector. Whether you are a beginner or an experienced developer, I
+            believe that this website will help you become more proficient in
+            working with CSS selectors.
+          </h4>
+        </div>
+        <!-- selected selector  -->
+        <div class="details">
+          <h1 title="selected selector" class="showtitle">selector title</h1>
+          <p
+            title="paragraph"
+            title="selector description"
+            class="showexplanation"
+          >
+            selector explanation
+          </p>
+        </div>
+        <!-- selectors options -->
+        <div title="selected selector options" class="showtestSelectors">
+          <!-- <button title="button"  class="selectorBtn selector-01"><a title="link" href="#class01">.class01</a></button>
+          <button title="button"  class="selectorBtn selector-02">.class02</button>
+          <button title="button"  class="selectorBtn selector-03">.class03</button> -->
+        </div>
+        <!-- sample code on which testing each selector  -->
+        <div title="sample code" id="sampleCode" class="sampleCode">
+          <div class="sample">
+            <a title="link" title="link" href="#sampleCode" class="greet"
+              >Hey There!🙂</a
+            >
+            <h1 title="heading1" class="title">Welcome to my Homepage</h1>
+            <div class="intro">
+              <p title="paragraph">
+                My name is Donald <span title="span" id="Lastname">Duck</span>
+              </p>
+              <p title="paragraph" id="my-Address">I live in Duckurg</p>
+              <p title="paragraph">I have many friends</p>
+            </div>
+
+            <p title="paragraph" class="myquote">
+              All my friends are great!<br />But I really like Daisy!!
+            </p>
+            <ul title="list" id="Listfriends">
+              <li title="li">Goofy</li>
+              <li title="li">Mickey</li>
+              <li title="li">Daisy</li>
+              <li title="li">Pluto</li>
+            </ul>
+            <p title="paragraph" lang="it" title="Hello beautiful">
+              Ciao bella
+            </p>
+            <h3 title="heading3">We are all animals!</h3>
+            <p title="paragraph">
+              <b title="b element" title="b element"
+                >My latest discoveries have led me to believe that we are all
+                animals:</b
+              >
+            </p>
+            <table title="table">
+              <tr title="table row">
+                <th title="table header">Name</th>
+                <th title="table header">Type of Animal</th>
+              </tr>
+              <tr title="table row">
+                <td title="table column">Mickey</td>
+                <td title="table column">Mouse</td>
+              </tr>
+              <tr title="table row">
+                <td title="table column">Goofey</td>
+                <td title="table column">Dog</td>
+              </tr>
+              <tr title="table row">
+                <td title="table column">Daisy</td>
+                <td title="table column">Duck</td>
+              </tr>
+              <tr title="table row">
+                <td title="table column">Pluto</td>
+                <td title="table column">Dog</td>
+              </tr>
+            </table>
+            <section title="section">
+              <h6 title="heading6">
+                <b title="b element" title="b element"
+                  >Subscribe to my newsletter:</b
+                >
+              </h6>
+              <form title="form" action="/action_page.php">
+                <label title="label" for="fname">First name:</label><br />
+                <input
+                  title="input"
+                  tabindex="0"
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  value="John"
+                  required
+                /><br />
+                <label title="label" for="lname">Last name:</label><br />
+                <input
+                  title="input"
+                  type="text"
+                  id="lname"
+                  name="lname"
+                  value="Doe"
+                  required
+                />
+                <input
+                  title="input"
+                  type="email"
+                  value="supportEmail"
+                /><br /><br /><br />
+                <label title="label" for="disabledid">Disabled Field:</label>
+                <input
+                  title="input"
+                  type="text"
+                  id="disabledid"
+                  name="disabledname"
+                  value="Disabled Field"
+                  disabled="disabled"
+                /><br /><br /><br />
+
+                <input
+                  title="radio input"
+                  type="radio"
+                  id="html"
+                  name="fav_language"
+                  value="HTML"
+                  checked="checked"
+                  style="background-color: peru"
+                />
+                <label title="label" for="html">HTML</label><br />
+                <input
+                  title="radio input"
+                  type="radio"
+                  id="css"
+                  name="fav_language"
+                  value="CSS"
+                />
+                <label title="label" for="css">CSS</label><br />
+
+                <input
+                  title="radio input"
+                  type="radio"
+                  id="javascript"
+                  name="fav_language"
+                  value="JavaScript"
+                />
+                <label title="label" for="javascript">JavaScript</label>
+                <p title="paragraph">
+                  <b title="b element" title="b element">New Categories</b>
+                </p>
+                <input
+                  title="checkbox input"
+                  type="checkbox"
+                  id="vehicle1"
+                  name="vehicle1"
+                  value="Bike"
+                />
+                <label title="label" for="vehicle1"> I have a bike</label><br />
+                <input
+                  title="checkbox input"
+                  type="checkbox"
+                  id="vehicle2"
+                  name="vehicle2"
+                  value="Car"
+                />
+                <label title="label" for="vehicle2"> I have a car</label><br />
+                <input
+                  title="checkbox input"
+                  type="checkbox"
+                  id="vehicle3"
+                  name="vehicle3"
+                  value="Boat"
+                  checked="checked"
+                />
+                <label title="label" for="vehicle3"> I have a boat</label
+                ><br /><br />
+
+                <label title="label" for="quantity"
+                  >Your lucky number (between 1 and 10):</label
+                >
+                <input
+                  title="number input"
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="7"
+                  min="1"
+                  max="10"
+                />
+                <input title="input" type="submit" value="Submit" />
+              </form>
+            </section>
+          </div>
+          <div class="sample">
+            <div class="name1">
+              <p title="paragraph" lang="en">
+                Def - Selects all elements with name2 that is a descendant of an
+                element with name1
+              </p>
+              <h3 title="heading3" class="name1 name2">
+                Def - Selects all elements with both name1 and name2 set within
+                its class attribute
+              </h3>
+              <b title="b element" lang="us" id="firstname"> firstname id</b>
+              <p title="paragraph" lang="en-us" class="intro">intro para</p>
+            </div>
+            <p title="paragraph" lang="no">
+              Def - Selects the first element that is placed immediately after
+              elements
+            </p>
+          </div>
+          <div class="sample">
+            <button title="button">
+              <a title="link" href="http://www.google.com" target="_blank"
+                >Google.com</a
+              >
+            </button>
+            <button title="button">
+              <a title="link" href="https://www.microsoft.com" target="_self"
+                >Microsoft.com</a
+              >
+            </button>
+
+            <img
+              src="/images/arch.png"
+              title="image"
+              width="100"
+              height="100"
+            />
+            <img
+              src="/images/food3.jfif"
+              title="food"
+              width="100"
+              height="100"
+            />
+          </div>
+          <div class="sample">
+            <span title="span"></span>
+            <p title="paragraph">
+              VIew replit for more information:
+              https://replit.com/@NamrahSaeed/Links-Selectors-Example
+            </p>
+            <a title="link" href="https://html-css-js.com/js/" target="_blank"
+              >Javascript</a
+            ><br />
+            <a title="link" href="https://html-css-js.com/html/" target="_blank"
+              >HTML</a
+            ><br />
+            <a
+              title="link"
+              href="https://htmlcheatsheet.com/css/"
+              target="_blank"
+              >CSS</a
+            >
+            <p title="paragraph" class="sample3">
+              ::before and ::after used <span>2000</span>
+            </p>
+            <p title="paragraph" style="width: 100%"></p>
+            <p title="paragraph" lang="it">Ciao bella!</p>
+
+            <div>
+              <p title="paragraph">I am a single para inside div.</p>
+            </div>
+
+            <div>
+              <span>This is a span.</span>
+              <p title="paragraph">This is a paragraph.</p>
+            </div>
+            <p title="paragraph">
+              An optional input element:<br /><input title="input" />
+            </p>
+
+            <p title="paragraph">
+              A required input element:<br /><input title="input" required />
+            </p>
+            <input
+              title="number input"
+              type="number"
+              min="5"
+              max="10"
+              value="17"
+            />
+            <input
+              title="input"
+              type="text"
+              name="fname"
+              placeholder="First name"
+            />
+            <p title="paragraph">
+              A readonly input element:<br /><input
+                title="input"
+                readonly
+                value="hello"
+              />
+            </p>
+
+            <p title="paragraph">
+              <a title="link" href="#news">Jump to New content</a>
+            </p>
+            <p title="paragraph">
+              <a title="link" href="#news1">Jump to New content 1</a>
+            </p>
+
+            <p title="paragraph">
+              Click on the links above and the :target selector highlight the
+              current active HTML anchor.
+            </p>
+
+            <p title="paragraph" id="news">
+              <b title="b element" title="b element">New content ...</b>
+            </p>
+            <p title="paragraph" id="news1">
+              <b title="b element" title="b element">New content 1...</b>
+            </p>
+
+            <p title="paragraph" class="selection-testing">
+              ::selection testing
+            </p>
+          </div>
+        </div>
+
+        <div title="relevant resources" class="relevant-resources">
+          <h2 title="heading2">Relevant Resources</h2>
+          <p title="paragraph">
+            <b title="b element" title="b element">w3.org: </b
+            ><a
+              target="_blank"
+              href="https://www.w3.org/TR/selectors-3/#specificity"
+            >
+              https://www.w3.org/TR/selectors-3/#specificity</a
+            >
+          </p>
+          <p title="paragraph">
+            <b title="b element" title="b element">w3schools: </b
+            ><a
+              target="_blank"
+              href="https://www.w3schools.com/cssref/trysel.php"
+            >
+              https://www.w3schools.com/cssref/trysel.php</a
+            >
+          </p>
+        </div>
+      </main>
+    </div>
+    <button title="button" id="scroll-btn" class="scroll-btn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
